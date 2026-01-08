@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>María & Juan — Nuestra boda</title>
+  <meta name="description" content="María & Juan — Nuestra boda. 12 de septiembre de 2026. Ver lugar y confirmar asistencia.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <meta property="og:title" content="María & Juan — Nuestra boda">
+  <meta property="og:description" content="Nos casamos el 12 de septiembre de 2026 en Finca El Olivar.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/hero-800.webp">
+  <style>
+    :root{--bg:#f9f7f5;--card:#ffffff;--muted:#7b6e67;--accent:#b49688;--accent-dark:#8f6f62;--radius:18px;--max-w:420px}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg),#fff);-webkit-font-smoothing:antialiased;display:flex;align-items:flex-start;justify-content:center;padding:20px 16px;color:#2a2420}
+    .wrap{width:100%;max-width:var(--max-w)}
+    .card{background:var(--card);border-radius:24px;box-shadow:0 10px 30px rgba(20,18,16,0.06);padding:0;overflow:hidden}
+    header.hero{position:relative;overflow:hidden;padding:18px 16px 22px;min-height:220px;display:flex;align-items:flex-end;border-radius:24px 24px 0 0;background-color:#f2e9e4}
+    .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;background-image:url('assets/hero.jpg');background-size:cover;background-position:center 55%;filter:contrast(.95) saturate(.92) brightness(.95)}
+    .hero-bg picture,.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block}
+    .hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg, rgba(12,10,9,0.28), rgba(12,10,9,0.06))}
+    header .hero-content{position:relative;z-index:2;display:flex;gap:12px;align-items:center;width:100%;color:#fff;text-shadow:0 4px 18px rgba(10,8,6,.45)}
+    .hero-svg{width:86px;height:86px;flex:0 0 86px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,0.06);backdrop-filter:blur(4px);box-shadow:inset 0 -6px 12px rgba(0,0,0,0.06);border:1px solid rgba(255,255,255,0.06)}
+    h1{font-family:'Playfair Display',serif;font-size:1.35rem;margin:0;letter-spacing:.2px}
+    p.lead{margin:4px 0 0;font-size:.95rem;color:rgba(255,255,255,.95)}
+    .date{margin-top:8px;font-size:.95rem;color:rgba(255,255,255,.95);display:flex;align-items:center;gap:8px}
+    .illustration{margin-top:6px;border-radius:14px;overflow:hidden;background:linear-gradient(180deg, rgba(180,145,136,0.06), rgba(249,247,245,0.03));padding:12px;display:flex;justify-content:center;align-items:center}
+    section{padding:14px 16px;border-top:1px solid rgba(40,36,34,0.03);background:transparent}
+    .title{font-weight:600;margin:0 0 6px;font-size:1rem}
+    .grid{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));color:#fff;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;box-shadow:0 8px 18px rgba(139,105,94,.18);border:none}
+    .btn.ghost{background:transparent;color:var(--accent-dark);box-shadow:none;border:1px solid rgba(139,105,94,.12)}
+    footer{text-align:center;margin:12px 0;color:var(--muted);font-size:.85rem}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(10,8,6,.35);display:none;align-items:center;justify-content:center;padding:20px;z-index:60}
+    .modal{width:100%;max-width:420px;background:linear-gradient(180deg,#fff,#fff);border-radius:16px;padding:16px;box-shadow:0 18px 40px rgba(10,8,6,.25)}
+    .form-row{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    input,select{padding:10px 12px;border-radius:10px;border:1px solid rgba(30,26,24,.06);font-size:.95rem}
+    .modal-actions{display:flex;gap:10px;margin-top:12px}
+    @media (prefers-reduced-motion:no-preference){.hero-svg svg{transform-origin:50% 50%;animation:float 6s ease-in-out infinite}}@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="titulo">
+      <header class="hero" role="banner" aria-label="Portada de la boda">
+        <div class="hero-bg" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="/assets/hero-480.webp 480w, /assets/hero-800.webp 800w, /assets/hero-1200.webp 1200w" sizes="(max-width:420px) 100vw, 1200px">
+            <img src="/assets/hero.jpg" alt="" aria-hidden="true" loading="eager">
+          </picture>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="hero-svg" aria-hidden="true">
+            <svg viewBox="0 0 120 120" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Emblema">
+              <defs><linearGradient id="g2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff6f3"/><stop offset="1" stop-color="#f4e6df"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="56" fill="url(#g2)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+              <g transform="translate(20,18)" fill="#b49688">
+                <path d="M24 10c-4 0-8 3-9 7-2 6 4 10 9 10 5 0 11-4 9-10-1-4-5-7-9-7z" opacity="0.95"/>
+                <path d="M8 42c0 0 10-8 20-6 10 2 16 10 16 10s-11 1-23-1c-12-2-13-3-13-3z" opacity="0.12"/>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h1 id="titulo">María &amp; Juan</h1>
+            <p class="lead">¡Nos casamos!</p>
+            <div class="date" aria-hidden="false"><span>📅</span><time datetime="2026-09-12">12 septiembre 2026</time><span style="margin-left:6px;">· 18:30</span></div>
+          </div>
+        </div>
+      </header>
+      <div class="illustration" aria-hidden="true">
+        <svg width="100%" viewBox="0 0 800 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-height:120px">
+          <g fill="none" stroke="#e9ddd7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 80 C150 10, 650 10, 770 80" opacity="0.9"/>
+            <path d="M40 95 C160 35, 640 35, 760 95" opacity="0.55"/>
+          </g>
+        </svg>
+      </div>
+      <section aria-labelledby="lugar"><h2 class="title" id="lugar">📍 Dónde & Hora</h2><p>Finca El Olivar — 18:30 h</p>
+        <div class="grid" style="margin-top:10px"><a class="btn" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Ver ubicación</a><button class="btn ghost" id="how-get">Cómo llegar</button></div>
+      </section>
+      <section aria-labelledby="confirmar"><h2 class="title" id="confirmar">💌 Confirmar asistencia</h2><p>Haz clic en "Confirmar" para enviar un mensaje por WhatsApp con tu nombre y número de acompañantes.</p>
+        <div class="grid" style="margin-top:10px"><button class="btn" id="rsvpBtn">Confirmar</button><a class="btn ghost" href="https://wa.me/34123456789" target="_blank" rel="noopener noreferrer">WhatsApp directo</a></div>
+        <p class="note">Si prefieres, también puedes escribirnos por WhatsApp directamente.</p>
+      </section>
+      <section aria-labelledby="info"><h2 class="title" id="info">Detalles</h2><p>Vestimenta: elegante / Cóctel ligero después de la ceremonia.</p></section>
+      <footer>María &amp; Juan · 2026</footer>
+    </div>
+  </div>
+  <div class="desktop-hint" style="display:none" id="desktopHint">Diseñada para móvil — abre esta página desde tu teléfono</div>
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="rsvpTitle">
+    <div class="modal" role="document"><h3 id="rsvpTitle">Confirmar asistencia</h3>
+      <p style="margin-top:6px;color:var(--muted)">Rellena tu nombre y el número de asistentes (incluyéndote).</p>
+      <div class="form-row"><label for="name">Nombre</label><input id="name" type="text" placeholder="Ej. Ana Pérez" autocomplete="name" /></div>
+      <div class="form-row"><label for="phone">Teléfono (opcional, para confirmar)</label><input id="phone" type="tel" placeholder="+34 6xx xxx xxx" inputmode="tel" /></div>
+      <div class="form-row"><label for="guests">Número de asistentes</label><select id="guests" aria-label="Número de asistentes"><option value="1">1 (yo)</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div>
+      <div class="modal-actions"><button class="close-btn" id="closeModal">Cancelar</button><button class="btn send-btn" id="sendRsvp">Enviar por WhatsApp</button></div>
+    </div>
+  </div>
+  <script>
+    const rsvpBtn = document.getElementById('rsvpBtn');
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+    const sendRsvp = document.getElementById('sendRsvp');
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const guestsInput = document.getElementById('guests');
+    const desktopHint = document.getElementById('desktopHint');
+    const howGet = document.getElementById('how-get');
+    function openModal(){ modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); setTimeout(()=>nameInput.focus(),60) }
+    function close(){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); rsvpBtn.focus() }
+    rsvpBtn.addEventListener('click', openModal); closeModal.addEventListener('click', close); modal.addEventListener('click', (e)=>{ if(e.target===modal) close(); });
+    sendRsvp.addEventListener('click', ()=>{ const name=(nameInput.value||'').trim(); const phone=(phoneInput.value||'').trim(); const guests=guestsInput.value||'1'; let lines=['Hola, confirmo mi asistencia a la boda de María & Juan el 12/09/2026.']; if(name) lines.push('Nombre: '+name); if(phone) lines.push('Teléfono: '+phone); lines.push('Asistentes: '+guests); lines.push('¡Gracias!'); const text=encodeURIComponent(lines.join('\n')); const targetNumber='34123456789'; window.location.href='https://wa.me/'+targetNumber+'?text='+text; close(); });
+    howGet.addEventListener('click', ()=>{ alert('Sugerencia: abre "Ver ubicación" y utiliza la opción "Cómo llegar" en Google Maps desde tu móvil.'); });
+    function checkWidth(){ if(window.innerWidth>=700){ desktopHint.style.display='block'; } else { desktopHint.style.display='none'; } } checkWidth(); window.addEventListener('resize', checkWidth); window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.style.display==='flex') close(); });
+  </script>
+</body>
+</html>
