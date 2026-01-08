@@ -17,6 +17,7 @@
     .wrap{width:100%;max-width:var(--max-w)}
     .card{background:var(--card);border-radius:24px;box-shadow:0 10px 30px rgba(20,18,16,0.06);padding:0;overflow:hidden}
     header.hero{position:relative;overflow:hidden;padding:18px 16px 22px;min-height:220px;display:flex;align-items:flex-end;border-radius:24px 24px 0 0;background-color:#f2e9e4}
+    /* .hero-bg uses the CSS background-image only (no <picture>/<img>) */
     .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;background-image:url('assets/hero.jpg');background-size:cover;background-position:center 55%;filter:contrast(.95) saturate(.92) brightness(.95)}
     .hero-bg picture,.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block}
     .hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg, rgba(12,10,9,0.28), rgba(12,10,9,0.06))}
@@ -44,6 +45,10 @@
   <div class="wrap">
     <div class="card" role="main" aria-labelledby="titulo">
       <header class="hero" role="banner" aria-label="Portada de la boda">
+        <div class="hero-bg" aria-hidden="true">
+          <!-- picture/img removed intentionally to avoid duplicate or broken-image icon.
+               The CSS background-image on .hero-bg (assets/hero.jpg) provides the hero. -->
+        </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <div class="hero-svg" aria-hidden="true">
@@ -59,7 +64,7 @@
           <div>
             <h1 id="titulo">Cristina &amp; Klaus</h1>
             <p class="lead">¡Nos casamos!</p>
-            <div class="date" aria-hidden="false"><span>📅</span><time datetime="2026-09-12">10 octubre 2026</time><span style="margin-left:6px;">· 13:30</span></div>
+            <div class="date" aria-hidden="false"><span>📅</span><time datetime="2026-09-12">10 octubre 2026</time><span style="margin-left:6px;"> · 13:30</span></div>
           </div>
         </div>
       </header>
@@ -79,7 +84,7 @@
         <p class="note">Si prefieres, también puedes escribirnos por WhatsApp directamente.</p>
       </section>
       <section aria-labelledby="info"><h2 class="title" id="info">Detalles</h2><p>Vestimenta: elegante / Cóctel ligero después de la ceremonia.</p></section>
-      <footer>Cristina &amp; Klaus · 2026</footer>
+      <footer>María &amp; Juan · 2026</footer>
     </div>
   </div>
   <div class="desktop-hint" style="display:none" id="desktopHint">Diseñada para móvil — abre esta página desde tu teléfono</div>
@@ -105,8 +110,8 @@
     function openModal(){ modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); setTimeout(()=>nameInput.focus(),60) }
     function close(){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); rsvpBtn.focus() }
     rsvpBtn.addEventListener('click', openModal); closeModal.addEventListener('click', close); modal.addEventListener('click', (e)=>{ if(e.target===modal) close(); });
-    sendRsvp.addEventListener('click', ()=>{ const name=(nameInput.value||'').trim(); const phone=(phoneInput.value||'').trim(); const guests=guestsInput.value||'1'; let lines=['Hola, confirmo mi asistencia a la boda de María & Juan el 12/09/2026.']; if(name) lines.push('Nombre: '+name); if(phone) lines.push('Teléfono: '+phone); lines.push('Asistentes: '+guests); lines.push('¡Gracias!'); const text=encodeURIComponent(lines.join('\n')); const targetNumber='34123456789'; window.location.href='https://wa.me/'+targetNumber+'?text='+text; close(); });
-    howGet.addEventListener('click', ()=>{ alert('Sugerencia: abre "Ver ubicación" y utiliza la opción "Cómo llegar" en Google Maps desde tu móvil.'); });
+    sendRsvp.addEventListener('click', ()=>{ const name=(nameInput.value||'').trim(); const phone=(phoneInput.value||'').trim(); const guests=guestsInput.value||'1'; let lines=['Hola, confirmo mi asistencia a la boda de María & Juan el 12/09/2026.']; if(name) lines.push('Nombre: '+name); if(phone) lines.push('Teléfono: '+phone); lines.push('Asistentes: '+guests); lines.push('¡Gracias!'); const text=encodeURIComponent(lines.join('\\n')); const targetNumber='34123456789'; window.location.href='https://wa.me/'+targetNumber+'?text='+text; close(); });
+    howGet.addEventListener('click', ()=>{ alert('Sugerencia: abre \"Ver ubicación\" y utiliza la opción \"Cómo llegar\" en Google Maps desde tu móvil.'); });
     function checkWidth(){ if(window.innerWidth>=700){ desktopHint.style.display='block'; } else { desktopHint.style.display='none'; } } checkWidth(); window.addEventListener('resize', checkWidth); window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.style.display==='flex') close(); });
   </script>
 </body>
