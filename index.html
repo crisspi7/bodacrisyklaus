@@ -9,7 +9,7 @@
   <meta property="og:title" content="María & Juan — Nuestra boda">
   <meta property="og:description" content="Nos casamos el 12 de septiembre de 2026 en Finca El Olivar.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/hero-800.webp">
+  <meta property="og:image" content="assets/hero-800.webp">
   <style>
     :root{--bg:#f9f7f5;--card:#ffffff;--muted:#7b6e67;--accent:#b49688;--accent-dark:#8f6f62;--radius:18px;--max-w:420px}
     html,body{height:100%}
@@ -46,8 +46,8 @@
       <header class="hero" role="banner" aria-label="Portada de la boda">
         <div class="hero-bg" aria-hidden="true">
           <picture>
-            <source type="image/webp" srcset="/assets/hero-480.webp 480w, /assets/hero-800.webp 800w, /assets/hero-1200.webp 1200w" sizes="(max-width:420px) 100vw, 1200px">
-            <img src="/assets/hero.jpg" alt="" aria-hidden="true" loading="eager">
+            <source type="image/webp" srcset="assets/hero-480.webp 480w, assets/hero-800.webp 800w, assets/hero-1200.webp 1200w" sizes="(max-width:420px) 100vw, 1200px">
+            <img src="assets/hero.jpg" alt="" aria-hidden="true" loading="eager">
           </picture>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
@@ -111,8 +111,8 @@
     function openModal(){ modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); setTimeout(()=>nameInput.focus(),60) }
     function close(){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); rsvpBtn.focus() }
     rsvpBtn.addEventListener('click', openModal); closeModal.addEventListener('click', close); modal.addEventListener('click', (e)=>{ if(e.target===modal) close(); });
-    sendRsvp.addEventListener('click', ()=>{ const name=(nameInput.value||'').trim(); const phone=(phoneInput.value||'').trim(); const guests=guestsInput.value||'1'; let lines=['Hola, confirmo mi asistencia a la boda de María & Juan el 12/09/2026.']; if(name) lines.push('Nombre: '+name); if(phone) lines.push('Teléfono: '+phone); lines.push('Asistentes: '+guests); lines.push('¡Gracias!'); const text=encodeURIComponent(lines.join('\n')); const targetNumber='34123456789'; window.location.href='https://wa.me/'+targetNumber+'?text='+text; close(); });
-    howGet.addEventListener('click', ()=>{ alert('Sugerencia: abre "Ver ubicación" y utiliza la opción "Cómo llegar" en Google Maps desde tu móvil.'); });
+    sendRsvp.addEventListener('click', ()=>{ const name=(nameInput.value||'').trim(); const phone=(phoneInput.value||'').trim(); const guests=guestsInput.value||'1'; let lines=['Hola, confirmo mi asistencia a la boda de María & Juan el 12/09/2026.']; if(name) lines.push('Nombre: '+name); if(phone) lines.push('Teléfono: '+phone); lines.push('Asistentes: '+guests); lines.push('¡Gracias!'); const text=encodeURIComponent(lines.join('\\n')); const targetNumber='34123456789'; window.location.href='https://wa.me/'+targetNumber+'?text='+text; close(); });
+    howGet.addEventListener('click', ()=>{ alert('Sugerencia: abre \"Ver ubicación\" y utiliza la opción \"Cómo llegar\" en Google Maps desde tu móvil.'); });
     function checkWidth(){ if(window.innerWidth>=700){ desktopHint.style.display='block'; } else { desktopHint.style.display='none'; } } checkWidth(); window.addEventListener('resize', checkWidth); window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.style.display==='flex') close(); });
   </script>
 </body>
